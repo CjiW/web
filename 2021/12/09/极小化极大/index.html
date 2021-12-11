@@ -28,7 +28,6 @@
     <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://cao_jingwei.gitee.io/mypage"></a>
-    <div title="播放/暂停" class="iconfont icon-play"></div>
     <h3 class="subtitle">极小化极大</h3>
     <div class="social">
         <div>
@@ -58,44 +57,18 @@
 <p>整个过程，从上到下遍历搜索树，回溯时利用子树信息更新答案，最后得到根节点的值，意义就是我方在双方都采取最优策略下能获得的最大分数。</p>
 <p>来看一个例子。</p>
 <p>称我方为 MAX，对方为 MIN，图示如下：</p>
-<p><img src="E:\blog\themes\diaspora\source\img\minimax-1.png" alt="img"></p>
+<p><img src="/mypage/img/minimax-1.png" alt="img"></p>
 <p>例如，对于如下的局势，假设从左往右搜索，根节点的数值为我方赢面：</p>
-<p><img src="E:\blog\themes\diaspora\source\img\minimax-2.png" alt="img"></p>
+<p><img src="/mypage/img/minimax-2.png" alt="img"></p>
 <p>我方应选择中间的路线。因为，如果选择左边的路线，最差的赢面是 3；如果选择中间的路线，最差的赢面是 15；如果选择右边的路线，最差的赢面是 1。虽然选择右边的路线可能有 22 的赢面，但对方也可能使我方只有 1 的赢面，假设对方会选择使得我方赢面最小的方向走，那么经过权衡，显然选择中间的路线更为稳妥。</p>
-<p><img src="E:\blog\themes\diaspora\source\img\minimax-3.png" alt="img"></p>
+<p><img src="/mypage/img/minimax-3.png" alt="img"></p>
 <p>实际上，在看右边的路线时，当发现赢面可能为 1 就不必再去看赢面为 12、20、22 的分支了，因为已经可以确定右边的路线不是最好的。</p>
 <p>朴素的 Minimax 算法常常需要构建一棵庞大的搜索树，时间和空间复杂度都将不能承受。而剪枝就是利用搜索树每个节点取值的上下界来对 Minimax 进行剪枝优化的一种方法。</p>
 <p>需要注意的是，对于不同的问题，搜索树每个节点上的值有着不同的含义，它可以是估值、分数、赢的概率等等，为方便起见，我们下面统一用分数来称呼。查看<a href="/2021/12/09/alpha-beta-%E5%89%AA%E6%9E%9D/">alpha-beta 剪枝</a></p>
 
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                </ul>
-            
         </div>
         
-    <div id='gitalk-container' class="comment link"
-		data-enable='false'
-        data-ae='false'
-        data-ci=''
-        data-cs=''
-        data-r=''
-        data-o=''
-        data-a=''
-        data-d='false'
-    >查看评论</div>
+
 
 
     </div>
